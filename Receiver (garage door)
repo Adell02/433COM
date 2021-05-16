@@ -316,7 +316,7 @@ void loop() {
         Serial.println(c2);
         Serial.println(c3);
       } 
-      else Serial.println("ERROR: Unknow sender identifier");
+      else Serial.println("ERROR: Unknown sender identifier");
     }
         
     receiver.resetAvailable();
