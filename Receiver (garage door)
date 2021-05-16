@@ -297,7 +297,7 @@ void loop() {
   //Ens fiquem a rebre
   if (receiver.available()) {
     bool mando_correcte = receiver.getReceivedValue() == 42;
-    if (receiver.getReceivedProtocol() == 1 and mando_correcte){
+    if (receiver.getReceivedProtocol() == 1){
       digitalWrite(A0, LOW);
       digitalWrite(A1, HIGH);
       if (mando_correcte){
