@@ -322,13 +322,14 @@ void loop() {
     receiver.resetAvailable();
 
     bool com = false;
-    long sec = millis(); // and sec-millis()<=5
-    while (not com and mando_correcte){
+    int cont = 0;
+    while (not com and mando_correcte and cont <= 20){
       if(receiver.available()){
         ret = segona_com(c1,c2,c3);
         if (ret) Serial.println("OK. Open door");
         else Serial.println("ERROR: wrong code");
         com = true;
+        cont++;
       }
     }
     receiver.resetAvailable();
